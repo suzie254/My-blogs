@@ -1,0 +1,22 @@
+.ba-jumbotron{
+    background-color: rgb(250, 224, 184);
+    height: 50vh;
+}
+
+.ba-pl-1{
+    padding-left: 1rem!important;
+}
+
+.ba-footer{
+    background-color: #131313;
+}
+
+.ba-screen-full{
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 600){
+    .ba-pl-1{
+        padding-left: 0;
+    }
+}
