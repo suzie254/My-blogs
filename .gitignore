@@ -1,0 +1,12 @@
+# Byte Compiled Files
+__pycache__/
+*.py[cod]
+
+# Startup Scripts
+start.ps1
+
+# Editor Files
+.vscode/
+
+# Environment Files
+.env
