@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "ba-screen-full">
+<div class = "container">
+    <div class="row">
+    <div class="col l3 m3 s12"></div>
+    <div class="col l6 m6 s12">
+    <h3>Comments</h3>
+    <p>You can moderate comments on your blog</p>
+    {% for message in get_flashed_messages() %}
+        <div class="card-panel red">
+        <span class = "white-text">{{ message }}</span>
+        </div>
+    {% endfor %}<br>
+    {% if comments %}
+    {% for comment in comments %}
+    <div class = "card-panel">
+        <p>{{ comment.content}}</p>
+        <p class = "right-align grey-text"> By {{ comment.user.username }}</p>
+        <a class="waves-effect waves-light btn-small red" href = "{{url_for('main.delete_comment', comment_id = comment.id)}}"><i class="material-icons left">delete</i>button</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class = "card-panel">
+        <p>No commments on this blog</p>
+    </div>
+    {% endif %}
+    <br>
+    </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
